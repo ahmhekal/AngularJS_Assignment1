@@ -18,11 +18,13 @@ function MsgFnction($scope) {
 
 
 }
-
 function CheckIfTooMuch (str) {
   var items = str.split(',');
-  var itemsFiltered = items.filter(function (i) {
-  return i != "";
+    for (var i = 0; i < items.length; i++) {
+         items[i]= items[i].replace(/\s/g, "");
+       };
+    var itemsFiltered = items.filter(function (i) {
+     return i != "";
   });
   var itemsCount=itemsFiltered.length;
   if (itemsCount >3)
