@@ -30,7 +30,7 @@ function CheckIfTooMuch (str) {
   if (itemsCount >3)
   {
   return "Too much!"}
-  else if (str=="") {
+  else if (itemsCount == 0) {
     return "Please enter data first"}
   else{
   return "Enjoy!"
